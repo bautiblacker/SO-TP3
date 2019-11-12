@@ -7,8 +7,10 @@
 #include <netinet/in.h>
 #include <netdb.h>
 #include <sys/types.h>
+#include <unistd.h>
 
 #define PORT 0x5B7F
+#define STDIN_FILENO 0
 
 // argv[0] filename
 // argv[1] server_ipaddress
@@ -40,14 +42,22 @@ int main(int argc, char const *argv[])
     }
 
     char * answer = "entendido\n";
-    //char * answer2 = "# ⬅ ⬆ ⬆ ⬅ ⬇ ➡ ⬇ ⬅ *";
-    //char * answer2 = "# 42248684 *\n";
-    //char * answer2 = "# GAAGTMTG *\n";
-    char * answer2 = "#origin*";
+    char * answer2 = "#0854780*\n";
+    char * answer3 = "morse\n";
+    char * answer4 = "EBADF: bad file descriptor, read\n";
+    char buff[50] = {0};
     send(socketfd, answer, strlen(answer), 0);
     sleep(2);
     send(socketfd, answer2, strlen(answer2), 0);
     sleep(2);
+    send(socketfd, answer3, strlen(answer3), 0);
+    int socketCpy = socketfd;
+    sleep(2);
+    int fd = dup2(5, STDIN_FILENO );
+    read(fd, &buff, 42);
+    // buff[strlen(buff)] = '\n';
+    // dup2(socketfd, socketCpy);
+    send(socketfd, "5\n", 2, 0);
     close(socketfd);
     return 0;
 }
