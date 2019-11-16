@@ -41,41 +41,41 @@ int main(int argc, char const *argv[])
 
     printf("connection check\n");
 
-    char * answer = "entendido\n";
+    char * answer = "esto vale un punto mas\n";
     char * answer2 = "#0854780*\n";
-    char * answer3 = "morse\n";
-    char * answer4 = "pistolero\n";
+    char * answer3 = "hola ariel\n";
+    char * answer4 = "10\n";
     char * answer5 = "easter_egg\n";
     char * answer6 = ".whatAmI\n";
-    char * answer7 = "indeterminado\n";
-    char * answer8 = "la gioconda\n";
-    char * answer9 = "this is awesome\n";
-    char * answer10 = "abalastro\n";
-    char * answer11 = "gdb es la hostia\n";
+    char * answer7 = "indeterminada\n";
+    char * answer8 = "pi\n";
+    char * answer9 = "hello there\n";
+    char * answer10 = "un acertijo\n";
+    char * answer11 = "gdbinit a full\n";
 
-    sleep(1);
+    sleep(10);
     send(socketfd, answer, strlen(answer), 0);
-    sleep(1);
+    sleep(10);
     send(socketfd, answer2, strlen(answer2), 0);
-    sleep(1);
+    sleep(10);
     send(socketfd, answer3, strlen(answer3), 0);
-    sleep(1);
+    sleep(10);
     send(socketfd, answer4, strlen(answer4), 0);
-    sleep(1);
+    sleep(10);
     send(socketfd, answer5, strlen(answer5), 0);
-    sleep(1);
+    sleep(10);
     send(socketfd, answer6, strlen(answer6), 0);
-    sleep(1);
+    sleep(10);
     send(socketfd, answer7, strlen(answer7), 0);
-    sleep(1);
+    sleep(10);
     send(socketfd, answer8, strlen(answer8), 0);
-    sleep(1);
+    sleep(10);
     send(socketfd, answer9, strlen(answer9), 0);
-    sleep(1);
+    sleep(10);
     send(socketfd, answer10, strlen(answer10), 0);
-    sleep(1);
+    sleep(10);
     send(socketfd, answer11, strlen(answer11), 0);
-    sleep(100);
+    sleep(10);
 
     close(socketfd);
 

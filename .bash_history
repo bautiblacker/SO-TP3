@@ -422,3 +422,54 @@ gcc -g client.c -o client
 gcc -g client.c -o client
 ./server | ./client 
 exit
+cd 
+ls
+gcc cerverza.c -o cerverza
+gcc cerverza.c -o cerverza
+gcc cerverza.c -o cerverza
+gcc cerverza.c -o cerverza
+ls
+ls --color
+gcc cerverza.c -o cerverza
+clear
+gcc cerverza.c -o cerverza
+gcc cerverza.c -o cerverza
+gcc cerverza.c -o cerverza
+gcc cerverza.c -o cerverza
+gcc cerverza.c serverGame.c -o cerverza
+./cerverza 
+gcc cerverza.c serverGame.c -o cerverza
+gcc cerverza.c serverGame.c -o cerverza
+./cerverza 
+gcc cerverza.c serverGame.c -o cerverza
+./cerverza 
+gcc cerverza.c serverGame.c -o cerverza
+./cerverza 
+./server 
+./server 
+./server
+./server
+./server
+./server
+man system
+./server
+./server
+gcc cerverza.c -o cerverza
+gcc cerverza.c serverGame.c -o cerverza
+clear
+gcc cerverza.c serverGame.c -o cerverza
+clear
+gcc cerverza.c serverGame.c -o cerverza
+clear
+gcc cerverza.c serverGame.c -o cerverza
+clear
+gcc cerverza.c serverGame.c -o cerverza
+clear
+gcc cerverza.c serverGame.c -o cerverza
+./cerverza 
+./cerverza 
+gcc cerverza.c serverGame.c -o cerverza
+./cerverza 
+git add .
+git commit -m 'ready, needs little fixes'
+exit
