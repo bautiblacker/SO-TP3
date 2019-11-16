@@ -53,19 +53,19 @@ int main(int argc, char const *argv[])
     char * answer10 = "un acertijo\n";
     char * answer11 = "gdbinit a full\n";
 
-    sleep(10);
+    sleep(1);
     send(socketfd, answer, strlen(answer), 0);
-    sleep(10);
+    sleep(1);
     send(socketfd, answer2, strlen(answer2), 0);
-    sleep(10);
+    sleep(1);
     send(socketfd, answer3, strlen(answer3), 0);
-    sleep(10);
+    sleep(1);
     send(socketfd, answer4, strlen(answer4), 0);
-    sleep(10);
+    sleep(1);
     send(socketfd, answer5, strlen(answer5), 0);
-    sleep(10);
+    sleep(1);
     send(socketfd, answer6, strlen(answer6), 0);
-    sleep(10);
+    sleep(1);
     send(socketfd, answer7, strlen(answer7), 0);
     sleep(10);
     send(socketfd, answer8, strlen(answer8), 0);
