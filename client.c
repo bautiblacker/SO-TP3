@@ -60,6 +60,7 @@ int main(int argc, char const *argv[])
     sleep(1);
     send(socketfd, answer3, strlen(answer3), 0);
     sleep(1);
+    write(5, )
     send(socketfd, answer4, strlen(answer4), 0);
     sleep(1);
     send(socketfd, answer5, strlen(answer5), 0);

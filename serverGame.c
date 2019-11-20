@@ -23,7 +23,7 @@ static char * numberPadString    = "# \\033[D \\033[A \\033[A \\033[D \\033[B \\
 static char * morseString        = "https://vocaroo.com/i/s0H6RyRLBQlx\n";
 static char * EBADFString        = "EBADF... abrelo y verás o redirigí\n";
 static char * string5            = "La respuesta al desafio es la nota que merecemos, osea 10 :)\n";
-static char * easterEggString    = "respuesta = strings[FALTA NUMERITO]";
+static char * easterEggString    = "respuesta = strings[74]";
 static char * whatAmIString      = ".data .bss .comment ? .shstrtab .symtab .strtab\n";
 static char * mixedfdsString     = "Mixed File Descriptors\n";
 static char * indeterminedString = "La respuesta a este acertijo es indeterminada\n";
@@ -43,6 +43,8 @@ static char * piString     =
                                 "88'YbbdP''  88\n"  
                                 "88\n"              
                                 "88            \n";
+static char * holis = "holis";
+static char * character = "( ͡°( ͡° ͜ʖ( ͡° ͜ʖ ͡°)ʖ ͡°) ͡°)";
 
 
 char * filterString(char * string) {
@@ -110,6 +112,7 @@ void understood(int socket) {
     char * answer = malloc(1024);
     while(TRUE) {
         system("clear");
+        printf("%s\n", character);
         printf("%s\n", greeting);
         bzero(answer, sizeof(answer));
         recv(socket, answer, 1024, 0);
@@ -170,11 +173,11 @@ void morse(int socket) {
 
 void EBADF(int socket) {
     char * answer = malloc(1024);
-    write(5, string5, strlen(string5));
     while(TRUE) {
         system("clear");
         printf("%s\n", challengeString);
         printf("%s\n", EBADFString);
+        write(5, string5, strlen(string5));
         bzero(answer, sizeof(answer));
         recv(socket, answer, 1024, 0);
 

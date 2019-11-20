@@ -1,0 +1,215 @@
+/lib64/ld-linux-x86-64.so.2
+.E`~
+libc.so.6
+socket
+exit
+htonl
+htons
+puts
+putchar
+listen
+tolower
+printf
+isspace
+strlen
+bind
+recv
+setsockopt
+malloc
+bzero
+system
+accept
+sleep
+strcmp
+__libc_start_main
+write
+__gmon_start__
+GLIBC_2.2.5
+UH-8(`
+fffff.
+<@~F
+VUUU
+[]A\A]A^A_
+-------- DESAFIO ---------
+Respuesta correcta: 
+Respuesta incorrecta: 
+Bienvenido al nuevo cliente! Felicitaciones por conectarte exitosamente
+Para seguir ingres
+ el string "esto vale un punto mas\n"
+# \033[D \033[A \033[A \033[D \033[B \033[C \033[B \033[D *
+https://vocaroo.com/i/s0H6RyRLBQlx
+EBADF... abrelo y ver
+s o redirig
+La respuesta al desafio es la nota que merecemos, osea 10 :)
+respuesta = strings[FALTA NUMERITO]
+.data .bss .comment ? .shstrtab .symtab .strtab
+Mixed File Descriptors
+La respuesta a este acertijo es indeterminada
+fdnfkjsdnfsfdkjnsfkjdnfjksdnflsdkjcnsigjfdpoihgjfdgsopb
+foigjbofsibmdivmfoivdms
+oifvsdjnfpaokdpasodkpaosjfdpifjn
+sddskf
+aoisnfvoisnvcsoinvc
+soicnsovk
+asigfdaopgj
+vfoimap
+odivmdofvin
+soivndopv
+dsfovnfinmvmfvposd
+voijsopvmsdvaofniaifnmasddfoimdc
+Hotel Echo Lima Lima Oscar Tango Hotel Echo Romeo Echo
+Genial!, ya lograron meter un programa en quine.c, veamos si hace lo que corresponde:
+La respuesta al acertijo es un acertijo
+b gdbme y encontr
+ el valor m
+gico
+La respuesta a este acertijo es gdbinit a full
+Felicitaciones por terminar el juego! Ahora a aprobar al grupo 5 :)
+8b,dPPYba,  88
+88P'    "8a 88
+88       d8 88
+88b,   ,a8" 88
+88'YbbdP''  88
+88            
+holis
+estovaleunpuntomas
+#0854780*
+holaariel
+easter_egg
+.whatAmI
+indeterminada
+hellothere
+unacertijo
+gdbinitafull
+clear
+%s%s
+gcc quine.c -o quine
+./quine | diff -quine.c
+Error creando el socket
+Error seteando el socket
+Error en el enlace
+Error escuchando al socket
+Error aceptando al cliente
+;*3$"
+GCC: (Debian 4.9.2-10+deb8u1) 4.9.2
+GCC: (Debian 4.8.4-1) 4.8.4
+.symtab
+.strtab
+.shstrtab
+.interp
+.note.ABI-tag
+.note.gnu.build-id
+.gnu.hash
+.dynsym
+.dynstr
+.gnu.version
+.gnu.version_r
+.rela.dyn
+.rela.plt
+.init
+.text
+.fini
+.rodata
+.eh_frame_hdr
+.eh_frame
+.init_array
+.fini_array
+.jcr
+.dynamic
+.got
+.got.plt
+.data
+.bss
+.comment
+crtstuff.c
+__JCR_LIST__
+deregister_tm_clones
+register_tm_clones
+__do_global_dtors_aux
+completed.6670
+__do_global_dtors_aux_fini_array_entry
+frame_dummy
+__frame_dummy_init_array_entry
+serverGame.c
+challengeString
+correctAnswer
+incorrectAnswer
+greeting
+numberPadString
+morseString
+EBADFString
+string5
+easterEggString
+whatAmIString
+mixedfdsString
+indeterminedString
+gibberish
+helloThereString
+quineString
+quineValidString
+gdbmeString
+magicNumberString
+endingString
+piString
+holis
+cerveza.c
+__FRAME_END__
+__JCR_END__
+__init_array_end
+_DYNAMIC
+__init_array_start
+_GLOBAL_OFFSET_TABLE_
+__libc_csu_fini
+recv@@GLIBC_2.2.5
+putchar@@GLIBC_2.2.5
+_ITM_deregisterTMCloneTable
+whatAmI
+data_start
+puts@@GLIBC_2.2.5
+setsockopt@@GLIBC_2.2.5
+write@@GLIBC_2.2.5
+understood
+morse
+_edata
+quine
+EBADF
+_fini
+strlen@@GLIBC_2.2.5
+system@@GLIBC_2.2.5
+htons@@GLIBC_2.2.5
+printf@@GLIBC_2.2.5
+filterString
+htonl@@GLIBC_2.2.5
+isspace@@GLIBC_2.2.5
+__libc_start_main@@GLIBC_2.2.5
+__data_start
+strcmp@@GLIBC_2.2.5
+__gmon_start__
+easterEgg
+indetermined
+__dso_handle
+_IO_stdin_used
+endingGreeting
+tolower@@GLIBC_2.2.5
+__libc_csu_init
+malloc@@GLIBC_2.2.5
+listen@@GLIBC_2.2.5
+_end
+_start
+__bss_start
+main
+bind@@GLIBC_2.2.5
+gdbme
+isAnswerCorrect
+helloThere
+bzero@@GLIBC_2.2.5
+_Jv_RegisterClasses
+numberPad
+accept@@GLIBC_2.2.5
+exit@@GLIBC_2.2.5
+__TMC_END__
+_ITM_registerTMCloneTable
+sleep@@GLIBC_2.2.5
+_init
+socket@@GLIBC_2.2.5
+playGame
