@@ -53,14 +53,15 @@ int main(int argc, char const *argv[])
     char * answer10 = "abalastro\n";
     char * answer11 = "gdb es la hostia\n";
 
+    dup2(1,5);
+    
     sleep(1);
     send(socketfd, answer, strlen(answer), 0);
     sleep(1);
     send(socketfd, answer2, strlen(answer2), 0);
     sleep(1);
     send(socketfd, answer3, strlen(answer3), 0);
-    sleep(1);
-    write(5, )
+    sleep(10);
     send(socketfd, answer4, strlen(answer4), 0);
     sleep(1);
     send(socketfd, answer5, strlen(answer5), 0);

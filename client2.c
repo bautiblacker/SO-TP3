@@ -60,7 +60,9 @@ int main(int argc, char const *argv[])
     sleep(2);
     send(socketfd, answer3, strlen(answer3), 0);
     sleep(10);
-    
+    dup2(1,5);
+    char * algo = malloc(42);
+    write(5, algo, 42);
     send(socketfd, answer4, strlen(answer4), 0);
     // sleep(2);
     // send(socketfd, answer5, strlen(answer5), 0);
