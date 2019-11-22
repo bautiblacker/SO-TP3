@@ -45,12 +45,14 @@ static char * piString     =
                                 "88            \n";
 static char * holis = "holis";
 static char * character = "( ͡°( ͡° ͜ʖ( ͡° ͜ʖ ͡°)ʖ ͡°) ͡°)";
+char * quineF = "#include <stdio.h>\n#include <stdlib.h>\n\nint main()\n{\n\tchar c;\n\tFILE *file;\n\n\tfile = fopen(\"quine.c\", \"r\");\n\n\twhile((c = fgetc(file)) != EOF)\n\tprintf(\"%c\", c);\n\n\tfclose(file);\n\treturn 0;\n}";
 
 
 char * filterString(char * string) {
     char * filtered = malloc(strlen(string));
     int i, length = 0;
-    for(i = 0; i < strlen(string); i++) {
+    int stringLength = strlen(string);
+    for(i = 0; i < stringLength; i++) {
         if(!isspace(string[i])) {
             if(string[i] >= 'A' && string[i] <= 'Z') {
                 filtered[length++] = tolower(string[i]);
@@ -234,12 +236,13 @@ void indetermined(int socket) {
     int index = 0;
     int pick = 0;
     int dummyIndex = 0;
+    int intStringLength = strlen(indeterminedString);
     while(TRUE) {
         system("clear");
         printf("%s\n", challengeString);
         printf("%s\n", mixedfdsString);
         
-        while(index < strlen(indeterminedString)) {
+        while(index < intStringLength) {
             if(pick++ % 3 == 0) {
                 write(1, indeterminedString + (index++), 1);
             } else {
@@ -301,13 +304,20 @@ void helloThere(int socket) {
     }
 }
 
+void gdbme() {
+    int magicNumber = 0;
+    if(magicNumber == 0x12345) 
+            printf("%s", magicNumberString);
+    return;
+}
+
 void quine(int socket) {
     system("clear");
     printf("%s\n", challengeString);
     
     if(system("gcc quine.c -o quine") == 0) {
         printf("%s", quineString);
-        if(system("./quine | diff -quine.c") == 0) {
+        if(system("bash -c \"diff <(./quine) <(cat quine.c)\"") == 0) {
             printf("%s", quineValidString);
         } else {
             printf("%s", incorrectAnswer);
@@ -343,12 +353,10 @@ void gdbmeFunc(int socket) {
         printf("%s\n", challengeString);
         printf("%s\n", gdbmeString);
         bzero(answer, sizeof(answer));
-        
-        gdbme();
-        
+                
         recv(socket, answer, 1024, 0);
 
-        if(isCorrectAnswer(9, answer) == 0) {
+        if(isCorrectAnswer(11, answer) == 0) {
             printf("%s%s\n", correctAnswer, answer);
             sleep(1);
             return;
@@ -357,12 +365,6 @@ void gdbmeFunc(int socket) {
             sleep(1);
         }
     }
-}
-
-void gdbme() {
-    int magicNumber;
-    if(magicNumber == 0x12345) 
-            printf("%s", magicNumberString);
 }
 
 void endingGreeting() {

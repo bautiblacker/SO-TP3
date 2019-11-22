@@ -74,9 +74,9 @@ int main(int argc, char const *argv[])
     sleep(1);
     send(socketfd, answer9, strlen(answer9), 0);
     sleep(1);
-    send(socketfd, answer10, strlen(answer10), 0);
-    sleep(1);
-    send(socketfd, answer11, strlen(answer11), 0);
+    // send(socketfd, answer10, strlen(answer10), 0);
+    // sleep(1);
+    // send(socketfd, answer11, strlen(answer11), 0);
     sleep(100);
 
     close(socketfd);
