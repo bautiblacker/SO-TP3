@@ -67,29 +67,63 @@ char * filterString(char * string) {
 int isCorrectAnswer(int challenge, char * answer) {
     char * filteredAnswer = filterString(answer);
     switch (challenge) {
-        case 1:
-            return strcmp("estovaleunpuntomas", filteredAnswer);
-        case 2:
-            return strcmp("#0854780*", filteredAnswer);
-        case 3:
-            return strcmp("holaariel", filteredAnswer);
-        case 4:
-            return strcmp("10", filteredAnswer);
-        case 5:
-            return strcmp("easter_egg", filteredAnswer);
-        case 6:
-            return strcmp(".whatami", filteredAnswer);
-        case 7:
-            return strcmp("indeterminada", filteredAnswer);
-        case 8:
-            return strcmp("pi", filteredAnswer);
-        case 9:
-            return strcmp("hellothere", filteredAnswer);
-        case 10:
-            return strcmp("unacertijo", filteredAnswer);
-        case 11:
-            return strcmp("gdbinitafull", filteredAnswer);
+        case 1: {
+                    int ret = strcmp("estovaleunpuntomas", filteredAnswer);
+                    free(filteredAnswer);
+                    return ret;
+        }
+        case 2: {
+                    int ret = strcmp("#0854780*", filteredAnswer);
+                    free(filteredAnswer);
+                    return ret;
+        }
+        case 3: {
+                    int ret = strcmp("holaariel", filteredAnswer);
+                    free(filteredAnswer);
+                    return ret;
+        }
+        case 4: {
+                    int ret = strcmp("10", filteredAnswer);
+                    free(filteredAnswer);
+                    return ret;
+        }
+        case 5: {
+                    int ret = strcmp("easter_egg", filteredAnswer);
+                    free(filteredAnswer);
+                    return ret;
+        }
+        case 6: {
+                    int ret = strcmp(".whatami", filteredAnswer);
+                    free(filteredAnswer);
+                    return ret;
+        }
+        case 7: {
+                    int ret = strcmp("indeterminada", filteredAnswer);
+                    free(filteredAnswer);
+                    return ret;
+        }
+        case 8: {
+                    int ret = strcmp("pi", filteredAnswer);
+                    free(filteredAnswer);
+                    return ret;
+        }
+        case 9: {
+                    int ret = strcmp("hellothere", filteredAnswer);
+                    free(filteredAnswer);
+                    return ret;
+        }
+        case 10: {                    
+                    int ret = strcmp("unacertijo", filteredAnswer);
+                    free(filteredAnswer);
+                    return ret;
+        }
+        case 11: {
+                    int ret = strcmp("gdbinitafull", filteredAnswer);
+                    free(filteredAnswer);
+                    return ret;
+        }
         default:
+            free(filteredAnswer);
             break;
     }
 }
@@ -122,6 +156,7 @@ void understood(int socket) {
         if(isCorrectAnswer(1, answer) == 0) {
             printf("%s%s\n", correctAnswer, answer);
             sleep(1);
+            free(answer);
             return;
         } else {
             printf("%s%s\n", incorrectAnswer, answer);
@@ -129,6 +164,7 @@ void understood(int socket) {
             system("clear");
         }
     }
+    free(answer);
 }
 
 void numberPad(int socket) {
@@ -143,12 +179,14 @@ void numberPad(int socket) {
         if(isCorrectAnswer(2, answer) == 0) {
             printf("%s%s\n", correctAnswer, answer);
             sleep(1);
+            free(answer);
             return;
         } else {
             printf("%s%s\n", incorrectAnswer, answer);
             sleep(1);
         }
     }
+    free(answer);
 }
 
 void morse(int socket) {
@@ -163,12 +201,14 @@ void morse(int socket) {
         if(isCorrectAnswer(3, answer) == 0) {
             printf("%s%s\n", correctAnswer, answer);
             sleep(1);
+            free(answer);
             return;
         } else {
             printf("%s%s\n", incorrectAnswer, answer);
             sleep(1);
         }
     }
+    free(answer);
 }
 
 void EBADF(int socket) {
@@ -184,12 +224,14 @@ void EBADF(int socket) {
         if(isCorrectAnswer(4, answer) == 0) {
             printf("%s%s\n", correctAnswer, answer);
             sleep(1);
+            free(answer);
             return;
         } else {
             printf("%s%s\n", incorrectAnswer, answer);
             sleep(1);
         }
     }
+    free(answer);
 }
 
 void easterEgg(int socket) {
@@ -204,12 +246,14 @@ void easterEgg(int socket) {
         if(isCorrectAnswer(5, answer) == 0) {
             printf("%s%s\n", correctAnswer, answer);
             sleep(1);
+            free(answer);
             return;
         } else {
             printf("%s%s\n", incorrectAnswer, answer);
             sleep(1);
         }
     }
+    free(answer);
 }
 
 void whatAmI(int socket) {
@@ -223,12 +267,14 @@ void whatAmI(int socket) {
         if(isCorrectAnswer(6, answer) == 0) {
             printf("%s%s\n", correctAnswer, answer);
             sleep(1);
+            free(answer);
             return;
         } else {
             printf("%s%s\n", incorrectAnswer, answer);
             sleep(1);
         }
     }
+    free(answer);
 }
 
 void indetermined(int socket) {
@@ -256,12 +302,14 @@ void indetermined(int socket) {
         if(isCorrectAnswer(7, answer) == 0) {
             printf("%s%s\n", correctAnswer, answer);
             sleep(1);
+            free(answer);
             return;
         } else {
             printf("%s%s\n", incorrectAnswer, answer);
             sleep(1);
         }
     }
+    free(answer);
 }
 
 void pi(int socket) {
@@ -276,12 +324,14 @@ void pi(int socket) {
         if(isCorrectAnswer(8, answer) == 0) {
             printf("%s%s\n", correctAnswer, answer);
             sleep(1);
+            free(answer);
             return;
         } else {
             printf("%s%s\n", incorrectAnswer, answer);
             sleep(1);
         }
     }
+    free(answer);
 }
 
 void helloThere(int socket) {
@@ -296,12 +346,14 @@ void helloThere(int socket) {
         if(isCorrectAnswer(9, answer) == 0) {
             printf("%s%s\n", correctAnswer, answer);
             sleep(1);
+            free(answer);
             return;
         } else {
             printf("%s%s\n", incorrectAnswer, answer);
             sleep(1);
         }
     }
+    free(answer);
 }
 
 void gdbme() {
@@ -328,19 +380,21 @@ void quine(int socket) {
 
     char * answer = malloc(1024);
     while(TRUE) {
-            bzero(answer, sizeof(answer));
-            recv(socket, answer, 1024, 0);
+        bzero(answer, sizeof(answer));
+        recv(socket, answer, 1024, 0);
 
-            if(isCorrectAnswer(10, answer) == 0) {
-                printf("%s%s\n", correctAnswer, answer);
-                sleep(1);
-                return;
-            } else {
-                printf("%s%s\n", incorrectAnswer, answer);
-                sleep(1);
-                system("clear");
-            }
+        if(isCorrectAnswer(10, answer) == 0) {
+            printf("%s%s\n", correctAnswer, answer);
+            sleep(1);
+            free(answer);
+            return;
+        } else {
+            printf("%s%s\n", incorrectAnswer, answer);
+            sleep(1);
+            system("clear");
         }
+    }
+    free(answer);
 }
 
 void gdbmeFunc(int socket) {
@@ -359,12 +413,14 @@ void gdbmeFunc(int socket) {
         if(isCorrectAnswer(11, answer) == 0) {
             printf("%s%s\n", correctAnswer, answer);
             sleep(1);
+            free(answer);
             return;
         } else {
             printf("%s%s\n", incorrectAnswer, answer);
             sleep(1);
         }
     }
+    free(answer);
 }
 
 void endingGreeting() {
