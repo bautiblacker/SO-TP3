@@ -12,7 +12,8 @@ void indetermined(int socket);
 void pi(int socket);
 void helloThere(int socket);
 void quine(int socket);
-void gdbme(int socket);
+void gdbmeFunc(int socket);
 void endingGreeting();
+void gdbme();
 
 #endif

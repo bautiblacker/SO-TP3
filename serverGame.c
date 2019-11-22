@@ -32,7 +32,7 @@ static char * helloThereString   = "Hotel Echo Lima Lima Oscar Tango Hotel Echo 
 static char * quineString        = "¡Genial!, ya lograron meter un programa en quine.c, veamos si hace lo que corresponde:\n";
 static char * quineValidString   = "La respuesta al acertijo es un acertijo\n";
 static char * gdbmeString        = "b gdbme y encontrá el valor mágico\n";
-static char * magicNumberString  = "La respuesta a este acertijo es gdbinit a full\n";
+static char * magicNumberString  = "La respuesta a este acertijo es: gdbinit a full\n";
 static char * endingString       = "Felicitaciones por terminar el juego! Ahora a aprobar al grupo 5 :)\n";
 static char * piString     = 
                                 "\n"                
@@ -76,7 +76,7 @@ int isCorrectAnswer(int challenge, char * answer) {
         case 5:
             return strcmp("easter_egg", filteredAnswer);
         case 6:
-            return strcmp(".whatAmI", filteredAnswer);
+            return strcmp(".whatami", filteredAnswer);
         case 7:
             return strcmp("indeterminada", filteredAnswer);
         case 8:
@@ -103,7 +103,7 @@ void playGame(int socket) {
     pi(socket);
     helloThere(socket);
     quine(socket);
-    gdbme(socket);
+    gdbmeFunc(socket);
     endingGreeting();
     return;
 }
@@ -218,7 +218,6 @@ void whatAmI(int socket) {
         printf("%s\n", whatAmIString);
         bzero(answer, sizeof(answer));
         recv(socket, answer, 1024, 0);
-
         if(isCorrectAnswer(6, answer) == 0) {
             printf("%s%s\n", correctAnswer, answer);
             sleep(1);
@@ -332,10 +331,9 @@ void quine(int socket) {
                 system("clear");
             }
         }
-
 }
 
-void gdbme(int socket) {
+void gdbmeFunc(int socket) {
     char * answer = malloc(1024);
     int magicNumber;
 
@@ -346,8 +344,7 @@ void gdbme(int socket) {
         printf("%s\n", gdbmeString);
         bzero(answer, sizeof(answer));
         
-        if(magicNumber == 0) 
-            printf("%s", magicNumberString);
+        gdbme();
         
         recv(socket, answer, 1024, 0);
 
@@ -360,6 +357,12 @@ void gdbme(int socket) {
             sleep(1);
         }
     }
+}
+
+void gdbme() {
+    int magicNumber;
+    if(magicNumber == 0x12345) 
+            printf("%s", magicNumberString);
 }
 
 void endingGreeting() {

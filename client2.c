@@ -67,13 +67,13 @@ int main(int argc, char const *argv[])
     send(socketfd, answer6, strlen(answer6), 0);
     sleep(2);
     send(socketfd, answer7, strlen(answer7), 0);
-    sleep(10);
+    sleep(1);
     send(socketfd, answer8, strlen(answer8), 0);
-    sleep(10);
+    sleep(1);
     send(socketfd, answer9, strlen(answer9), 0);
-    sleep(10);
+    sleep(1);
     send(socketfd, answer10, strlen(answer10), 0);
-    sleep(10);
+    sleep(1);
     send(socketfd, answer11, strlen(answer11), 0);
     sleep(1000);
 
